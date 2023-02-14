@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game Lobby{% endblock %}
+
+{% block scripts %}
+    {{ encore_entry_script_tags('lobby') }}
+    <script>
+        window.blueRebels = {
+            code: "{{ code }}"
+        };
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div id="lobby"></div>
+{% endblock %}
